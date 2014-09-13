@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Nous contacter{% endblock %}
+
+
+
+{% block content %}
+	<div class="row featurette">
+	  <div class="col-md-7">
+	    <h2 class="featurette-heading">Nous rejoindre. <span class="text-muted">Nous sommes disponible en tout temps pour repondre à vos besoins</span></h2>
+	    <p class="lead"><strong>Adresse:</strong>Lot 409-U, quartier Ahouassa,</p>
+                                  <p class="lead contact" >Cotonou, République du Bénin<br/>
+                                                  Boite Postale : 06 BP : 1694<br/>
+                                                  Tél. : (229) 21-33-17-07
+												  (229) 97 77 89 90<br/>
+												  Site web : www.agtep-immo.com </p>
+	  </div>
+
+	  
+	  <div class="col-md-5">
+	    <img class="featurette-image img-responsive" src="{% static 'AGTEP_Pictures_500x500/transaction_500x500.jpg' %}" alt="Generic placeholder image">
+	  </div>
+	</div>
+
+	<hr class="featurette-divider">
+
+{% endblock %}
+
+
+{% block js %}
+  <script>
+      window.onload = function() {
+        activeTab("contacts");
+      };
+  </script>
+{% endblock %}

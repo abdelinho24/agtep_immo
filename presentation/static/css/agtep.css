@@ -1,0 +1,44 @@
+/***** main CSS instructions *****/
+
+/*Body style*/
+body {
+    background-image: url(../background/new_background.png);
+
+}
+
+.row, .featurette {
+ 
+   margin: 0 auto;
+
+}
+
+.contact {
+ 
+   padding-left: 85px;
+
+}
+
+.featurette-heading {
+margin-top: 10px;
+}
+
+/*** Doc elements ***/
+.btn-primary {
+	color: #fff;
+	background-color: #428bca;
+	border-color: #357ebd;
+}
+
+
+
+
+#footer {
+	width:100%;
+	height: 150px;
+	padding-top: 20px;
+	background-color: #000000;
+	color:#ffffff;
+}
+
+
+

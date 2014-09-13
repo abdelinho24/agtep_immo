@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}A propos de nous{% endblock %}
+
+{% block content %}
+	<div class="row featurette">
+	  <div class="col-md-7">
+	    <h2 class="featurette-heading">Transactions immobilieres. <span class="text-muted">Un savoir faire qui nous distingue.</span></h2>
+	    <p class="lead">Les terrains vides sont de plus en plus rares au centre ville. Du coup les banlieues sont prises d’assaut. Les besoins d’acquisitions de terrains et d’immeubles augmentent sans cesse, d’où des transactions immobilières de plus en plus nombreuses avec des risques d’arnaque à tout bout de champ. La vigilance doit être permanente. Confiez vos affaires immobilières à AGTEP IMMO, elle vous permettra d’éviter des écueils.</p>
+	  </div>
+	  
+	  <div class="col-md-5">
+	    <img class="featurette-image img-responsive" src="{% static 'AGTEP_Pictures_500x500/transaction_500x500.jpg' %}" alt="Generic placeholder image">
+	  </div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+	  <div class="col-md-5">
+	    <img class="featurette-image img-responsive" src="{% static 'AGTEP_Pictures_500x500/construction_500x500.jpg' %}" alt="Generic placeholder image">
+	  </div>
+	  <div class="col-md-7">
+	    <h2 class="featurette-heading">Construction immobiliere. <span class="text-muted">Services conseils en construction.</span></h2>
+	    <p class="lead">Sous la direction technique et efficace du Directeur Général de AGTEP IMMO et ses collaborateurs, plusieurs bâtiments commerciaux, des bâtiments d’habitation de grand standing, des immeubles administratifs de référence sont réalisés aussi bien à Cotonou, capitale économique du Bénin et à Porto-Novo, notre Capitale administrative.<br/>
+	    Pour un contrôle technique efficace et un suivi d’exécution rigoureux de vos construction immobilières, AGTEP IMMO peut vous fournir l’assistance technique nécessaire et à des coûts très abordables.</p>
+	  </div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+	  <div class="col-md-7">
+	    <h2 class="featurette-heading">Promotion immobilière. <span class="text-muted">Expertise en promotion de propriétés.</span></h2>
+	    <p class="lead">Rechercher, acheter, vendre des espaces construits ou à construire, des terrains vagues ou viabilisés en vue de les réaménager, de les revendre ou de les louer, AGTEP IMMO vous garantit de bonnes affaires.</p>
+	  </div>
+	  <div class="col-md-5">
+	    <img class="featurette-image img-responsive" src="{% static 'AGTEP_Pictures_500x500/promotion_500x500.jpg' %}" alt="Generic placeholder image">
+	  </div>
+	</div>
+{% endblock %}
+
+{% block js %}
+	<script>
+	      window.onload = function() {
+	        activeTab("presentation");
+	      };
+	</script>
+{% endblock %}	

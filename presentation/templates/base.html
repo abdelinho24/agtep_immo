@@ -1,0 +1,335 @@
+{% load staticfiles %}
+{% load url from future %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/agtep.css' %}" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">AGTEP IMMO</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li id="accueil" class="active">
+                  <a href="{% url "accueil" %}">Accueil</a>
+                </li>
+                <li id="presentation">
+                  <a href="{% url "services" %}">Services</a>
+                </li>
+                <li id="offre">
+                  <a href="{% url "offres" %}">Offres</a>
+                </li>
+                <li id="realisations">
+                  <a href="#about">Realisations</a>
+                </li>
+                <li id="contacts">
+                  <a href="{% url "contact" %}">Nous joindre</a>
+                </li>
+                <!--<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>-->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    {% block carousel %}
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="{% static 'AGTEP_Pictures_1300x500/1_1300_500.jpg' %}" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Expertise conseil en construction immobilière</h1>
+                <p>Nous sommes fiers des projets réalisés au cours des dernières années, dont la construction de notre tout nouveau site Internet. Nous vous invitons à le parcourir afin de découvrir nos différents services. N’hésitez pas à communiquer avec notre équipe pour obtenir plus d’information sur nos services.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">En savoir plus >></a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{% static 'AGTEP_Pictures_1300x500/2_1300_500.jpg' %}" alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Expertise en promotion immobilière </h1>
+                <p>Rechercher, acheter, vendre des espaces construits ou à construire, des terrains vagues ou viabilisés en vue de les réaménager, de les revendre ou de les louer, AGTEP IMMO vous garantit de bonnes affaires.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">En savoir plus >></a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{% static 'AGTEP_Pictures_1300x500/3_1300_500.jpg' %}" alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Expertise en transaction immobilière</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">En savoir plus >></a></p>
+              </div>
+            </div>
+          </div>
+          <!--<div class="item">
+            <img src="{% static 'AGTEP_Pictures_1300x500/4_1300_500.jpg' %}" alt="Fourth slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Expertise en promotion immobilière </h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">En savoir plus >></a></p>
+              </div>
+            </div>
+          </div>-->
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div><!-- /.carousel -->
+    {% endblock %}
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <!--<div class="container marketing">
+
+      <!-- Three columns of text below the carousel 
+      <div class="row">
+        <div class="col-lg-6">
+          <img class="img-circle" src="{% static 'AGTEP_Pictures_140x140/3_140_140.jpg' %}" alt="Generic placeholder image">
+          <h2>Inspection pre-achat</h2>
+          <p>Pour les acheteurs de maisons ou de copropriétés usagées qui veulent connaître, avant de procéder à la transaction, les malfaçons et les défauts apparents ainsi que relever les indices de vices qui pourraient dissimuler des problèmes plus sérieux et affecter la valeur, l'habitabilité et/ou la sécurité de l'immeuble convoité.</p>
+          <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-6 
+        <div class="col-lg-6">
+          <img class="img-circle" src="{% static 'AGTEP_Pictures_140x140/2_140_140.jpg' %}" alt="Generic placeholder image">
+          <h2>Inspection préréception des parties communes </h2>
+          <p>Pour les acheteurs de maisons ou de copropriétés neuves et qui veulent s'assurer que l'immeuble a été construit selon les règles de l'art avant de prendre possession de l'immeuble.</p>
+          <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-6 
+        <!--<div class="col-lg-6">
+          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-6 
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <!--<hr class="featurette-divider">-->
+      
+      <div class="maincontent">
+        {% block content %}
+            <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">Contexte d'affaire. <span class="text-muted">Le marché immobilier au Bénin</span></h2>
+              <p class="lead">Depuis près de deux décennies, notre pays connaît un développement harmonieux dans le secteur de l’immobilier. Cotonou, capitale économique du Bénin, compte de plus en plus de grands immeubles prestigieux et d’innombrables bâtiments de grand standing à usage administratif, commercial et d’habitation. Porto-Novo, notre capitale administrative, n'est pas du reste. </p>
+            </div>
+            
+            <div class="col-md-5">
+              <img class="featurette-image img-responsive" src="{% static 'AGTEP_Pictures_500x500/transaction_500x500.jpg' %}" alt="Generic placeholder image">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+            <div class="col-md-5">
+              <img class="featurette-image img-responsive" src="{% static 'AGTEP_Pictures_500x500/construction_500x500.jpg' %}" alt="Generic placeholder image">
+            </div>
+            <div class="col-md-7">
+              <h2 class="featurette-heading">Gestion immobiliere. <span class="text-muted">Services en gestion immobiliere.</span></h2>
+              <p class="lead">Pour plus d’efficacité et de rigueur dans la gestion de vos bâtiments en location ou à louer, AGTEP IMMO vous offres ses meilleurs services :<br/><br/>
+                  &nbsp;&nbsp; •	gestion administrative (trouver des locataires, etablir les contrats bail, regler les litiges, etc);<br/>
+                  &nbsp;&nbsp; •	gestion technique (veiller aux travaux de réparation et d’entretien, rédiger l’état des lieux, etc);<br/>
+                  &nbsp;&nbsp; •	gestion financière (encaisser les loyers, tenir la comptabilité, etc.)<br/><br/>
+              Confier la gestion locative de vos immeubles résidentiels, administratifs, commerciaux ou industriels à AGTEP IMMO vous fait gagner du temps et vous débarrasse de vos soucis liés à la gestion quotidienne de vos biens immobiliers.         </div>
+          </div>
+
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+
+
+              <div class="col-md-7">
+                <h2 class="featurette-heading">Transactions immobilieres. <span class="text-muted">Une garantie de sureté.</span></h2>
+                <p class="lead">Les terrains vides sont de plus en plus rares au centre ville. Du coup les banlieues sont prises d’assaut. Les besoins d’acquisitions de terrains et d’immeubles augmentent sans cesse, d’où des transactions immobilières de plus en plus nombreuses avec des risques d’arnaque à tout bout de champ. La vigilance doit être permanente. Confiez vos affaires immobilières à AGTEP IMMO, elle vous permettra d’éviter des écueils.</p>
+              </div>
+
+              <div class="col-md-5">
+                <img class="featurette-image img-responsive" src="{% static 'AGTEP_Pictures_500x500/transaction_500x500.jpg' %}" alt="Generic placeholder image">
+              </div>
+            </div>
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+
+              <div class="col-md-5">
+                <img class="featurette-image img-responsive" src="{% static 'AGTEP_Pictures_500x500/transaction_500x500.jpg' %}" alt="Generic placeholder image">
+              </div>
+              <div class="col-md-7">
+                <h2 class="featurette-heading">Expertise immobiliere. <span class="text-muted">Un savoir faire qui nous distingue.</span></h2>
+                <p class="lead">Pour acquérir ou céder des biens immobiliers (terrain, bâtiment ou autres), il est parfois nécessaire, voire judicieux d’en connaître la valeur vénale d’avance afin d’éviter de les brader par ignorance.<br/>
+                    Aussi, pour obtenir un prêt auprès d’une institution financière sur la base d’un bien immobilier à mettre en gage, il est indispensable, voire impérieux de le faire expertiser afin d’évaluer la valeur vénale de ce bien.<br/>
+                    AGTEP IMMO, reconnue pour son sérieux et son efficacité en la matière par plusieurs opérateurs économiques de la place vous permettra de savoir la valeur vénale de vos biens immobiliers pour mieux les négocier avec vos partenaires.
+                </p>
+              </div>
+            </div>
+
+
+           <hr class="featurette-divider">
+
+            <div class="row featurette">
+
+              <div class="col-md-7">
+                <h2 class="featurette-heading">Construction immobiliere. <span class="text-muted">Services conseils en construction.</span></h2>
+                <p class="lead">Sous la direction technique et efficace du Directeur Général de AGTEP IMMO et ses collaborateurs, plusieurs bâtiments commerciaux, des bâtiments d’habitation de grand standing, des immeubles administratifs de référence sont réalisés aussi bien à Cotonou, capitale économique du Bénin et à Porto-Novo, notre Capitale administrative.<br/>
+                Pour un contrôle technique efficace et un suivi d’exécution rigoureux de vos construction immobilières, AGTEP IMMO peut vous fournir l’assistance technique nécessaire et à des coûts très abordables.</p>
+              </div>
+
+              <div class="col-md-5">
+                <img class="featurette-image img-responsive" src="{% static 'AGTEP_Pictures_500x500/construction_500x500.jpg' %}" alt="Generic placeholder image">
+              </div>
+            </div>
+
+           <hr class="featurette-divider">
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive" src="{% static 'AGTEP_Pictures_500x500/promotion_500x500.jpg' %}" alt="Generic placeholder image">
+             </div>
+
+            <div class="row featurette">
+              <div class="col-md-7">
+                <h2 class="featurette-heading">Promotion immobilière. <span class="text-muted">Expertise en promotion de propriétés.</span></h2>
+                <p class="lead">Rechercher, acheter, vendre des espaces construits ou à construire, des terrains vagues ou viabilisés en vue de les réaménager, de les revendre ou de les louer, AGTEP IMMO vous garantit de bonnes affaires.</p>
+              </div>
+
+            </div>
+
+        {% endblock %}
+      </div>
+      
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      
+    </div><!-- /.container -->
+
+    <!-- FOOTER -->
+      <div id="footer">
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 AGTEP IMMO, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+    <script src="{% static 'jquery.easing.1.3.min.js' %}"></script>
+    <script src="{% static 'docs.min.js' %}"></script>
+
+    <!--<script>
+     $(document).ready(function () {
+
+         $('li > a').click(function() {
+         $('li').removeClass();
+          $(this).parent().addClass('active');
+      });
+      });
+    </script>
+-->
+
+    <script>
+      $(document).ready(function() {
+        $('#accueil').click(function(event) {
+            $('.maincontent')
+                .animate(
+                    { left: 200 }, {
+                        duration: 'slow',
+                        easing: 'easeOutBack'
+                    })
+                .animate(
+                    { left: 0 }, {
+     
+                        duration: 'slow',
+                        easing: 'easeOutBack'
+                    });
+        });
+      });
+    </script>
+
+
+    <script >
+      function activeTab(id_li) {
+        $('li').removeClass();
+        $('#'+id_li).addClass('active');
+      }
+    </script>
+
+    {% block js %}{% endblock %}
+
+  </body>
+</html>
